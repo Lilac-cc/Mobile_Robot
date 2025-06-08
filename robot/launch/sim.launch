@@ -1,0 +1,27 @@
+<launch>
+  <arg name="model" default="$(find robot)/urdf/robot.xacro"/>
+  <arg name="rvizconfig" default="$(find robot)/rviz/urdf.rviz" />
+
+  <include file="$(find robot)/launch/gazebo.launch">
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" />
+
+  <!-- 加载控制器 -->  
+  <rosparam file="$(find robot)/config/control.yaml" command="load"/>
+
+  <node name="controller_manager" pkg="controller_manager" type="spawner" output="screen"
+        args="joint_state_controller diff_drive_controller"
+  />
+
+  <!-- <node name="rqt_robot_steering" pkg="rqt_robot_steering" type="rqt_robot_steering">
+    <param name="default_topic" value="/diff_drive_controller/cmd_vel"/>
+  </node> -->
+
+  <!-- arbotix -->
+  <!-- <node name="arbotix" pkg="arbotix_python" type="arbotix_driver" output="screen">
+    <rosparam file="$(find robot)/config/hello.yaml" command="load" />
+    <param name="sim" value="true" />
+  </node> -->
+</launch>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="robot"
+  xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find robot)/urdf/robot.gazebo.xacro"/>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="1.47451495458029E-17 0 -0.03"
+        rpy="0 0 0" />
+      <mass
+        value="1.17270353755551" />
+      <inertia
+        ixx="0.00300664842174698"
+        ixy="-4.06347892977222E-18"
+        ixz="1.70399206185924E-20"
+        iyy="0.00172424770321966"
+        iyz="2.53324062594359E-21"
+        izz="0.00403936913414965" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 0.0125 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.151189146454009" />
+      <inertia
+        ixx="8.81936687648385E-05"
+        ixy="1.44447723920675E-37"
+        ixz="1.31516848005396E-37"
+        iyy="0.000160638468107384"
+        iyz="2.75506488473974E-37"
+        izz="8.81936687648385E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="${pi/2} 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="package://robot/meshes/left_wheel_link.STL" />
+      </geometry> -->
+      <geometry>
+        <cylinder radius="0.045" length="0.025"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="${pi/2} 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="package://robot/meshes/left_wheel_link.STL" />
+      </geometry> -->
+      <geometry>
+        <cylinder radius="0.045" length="0.025"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.115 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="2.60208521396521E-18 -0.0125 -8.67361737988404E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.151189146454009" />
+      <inertia
+        ixx="8.81936687648385E-05"
+        ixy="-1.41172157875717E-21"
+        ixz="6.01853107621011E-36"
+        iyy="0.000160638468107384"
+        iyz="-6.57752008171852E-37"
+        izz="8.81936687648384E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="${pi/2} 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="package://robot/meshes/right_wheel_link.STL" />
+      </geometry> -->
+      <geometry>
+        <cylinder radius="0.045" length="0.025"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="${pi/2} 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="package://robot/meshes/right_wheel_link.STL" />
+      </geometry> -->
+      <geometry>
+        <cylinder radius="0.045" length="0.025"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.115 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <!-- 添加了传感器 激光雷达 -->
+  <link name="laser_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="laser_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="laser_link" />
+    <origin xyz="0 0 0.01" />
+  </joint>
+</robot>
