@@ -1,0 +1,18 @@
+<launch>
+  <arg name="model" default="$(find roller_3rd)/urdf/roller_3rd.xacro"/>
+  <arg name="rvizconfig" default="$(find roller_3rd)/rviz/urdf.rviz" />
+
+  <include file="$(find roller_3rd)/launch/gazebo.launch">
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" />
+
+  <!-- 加载控制器 -->  
+  <rosparam file="$(find roller_3rd)/config/control.yaml" command="load"/>
+
+  <node name="controller_manager" pkg="controller_manager" type="spawner" output="screen"
+        args="joint_state_controller roller_skating_controller"
+  />
+
+</launch>

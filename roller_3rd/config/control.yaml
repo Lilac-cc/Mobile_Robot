@@ -1,0 +1,34 @@
+joint_state_controller: 
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+roller_skating_controller: 
+  type: velocity_controllers/JointGroupVelocityController
+  joints: 
+    - leg1_1_joint
+    - leg1_2_joint
+    - leg1_3_joint
+    - leg2_1_joint
+    - leg2_2_joint
+    - leg2_3_joint
+    - leg3_1_joint
+    - leg3_2_joint
+    - leg3_3_joint
+    - leg4_1_joint
+    - leg4_2_joint
+    - leg4_3_joint
+  pid:
+    - { p: 100, i: 0.0, d: 10 }
+    - { p: 100, i: 0.0, d: 10 }
+    - { p: 100, i: 0.0, d: 10 }
+    - { p: 100, i: 0.0, d: 10 }
+    - { p: 100, i: 0.0, d: 10 }
+    - { p: 100, i: 0.0, d: 10 }
+    - { p: 100, i: 0.0, d: 10 }
+    - { p: 100, i: 0.0, d: 10 }
+    - { p: 100, i: 0.0, d: 10 }
+    - { p: 100, i: 0.0, d: 10 }
+    - { p: 100, i: 0.0, d: 10 }
+    - { p: 100, i: 0.0, d: 10 }
+  
+  state_publish_rate: 50
