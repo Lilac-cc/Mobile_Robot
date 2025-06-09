@@ -8,8 +8,8 @@
   <xacro:property name="PI" value="3.14159265"/>
 
   <!-- 定义变量关节阻尼<damping>和摩擦<friction> -->
-  <xacro:property name="Damping" value="10"/>
-  <xacro:property name="Friction" value="1.0"/>
+  <xacro:property name="Damping" value="1.0"/>
+  <xacro:property name="Friction" value="0.3"/>
 
   <link
     name="base_link">

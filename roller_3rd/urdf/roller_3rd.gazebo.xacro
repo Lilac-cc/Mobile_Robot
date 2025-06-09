@@ -6,85 +6,85 @@
   <gazebo reference="leg1_1_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <gazebo reference="leg1_2_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <gazebo reference="leg1_3_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <gazebo reference="leg2_1_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <gazebo reference="leg2_2_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <gazebo reference="leg2_3_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <gazebo reference="leg3_1_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <gazebo reference="leg3_2_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <gazebo reference="leg3_3_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <gazebo reference="leg4_1_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <gazebo reference="leg4_2_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <gazebo reference="leg4_3_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
+    <kp>5.0</kp>
+    <kd>0.0</kd>
   </gazebo>
 
   <transmission name="leg1_1_trans">

@@ -1,5 +1,18 @@
 joint_state_controller: 
   type: joint_state_controller/JointStateController
+  joints: 
+    - leg1_1_joint
+    - leg1_2_joint
+    - leg1_3_joint
+    - leg2_1_joint
+    - leg2_2_joint
+    - leg2_3_joint
+    - leg3_1_joint
+    - leg3_2_joint
+    - leg3_3_joint
+    - leg4_1_joint
+    - leg4_2_joint
+    - leg4_3_joint
   publish_rate: 50
 
 roller_skating_controller: 
@@ -18,17 +31,17 @@ roller_skating_controller:
     - leg4_2_joint
     - leg4_3_joint
   pid:
-    - { p: 100, i: 0.0, d: 10 }
-    - { p: 100, i: 0.0, d: 10 }
-    - { p: 100, i: 0.0, d: 10 }
-    - { p: 100, i: 0.0, d: 10 }
-    - { p: 100, i: 0.0, d: 10 }
-    - { p: 100, i: 0.0, d: 10 }
-    - { p: 100, i: 0.0, d: 10 }
-    - { p: 100, i: 0.0, d: 10 }
-    - { p: 100, i: 0.0, d: 10 }
-    - { p: 100, i: 0.0, d: 10 }
-    - { p: 100, i: 0.0, d: 10 }
-    - { p: 100, i: 0.0, d: 10 }
+    leg1_1_joint: {name: leg1_1_joint}
+    leg1_2_joint: {name: leg1_2_joint}
+    leg1_3_joint: {name: leg1_3_joint}
+    leg2_1_joint: {name: leg2_1_joint}
+    leg2_2_joint: {name: leg2_2_joint}
+    leg2_3_joint: {name: leg2_3_joint}
+    leg3_1_joint: {name: leg3_1_joint}
+    leg3_2_joint: {name: leg3_2_joint}
+    leg3_3_joint: {name: leg3_3_joint}
+    leg4_1_joint: {name: leg4_1_joint}
+    leg4_2_joint: {name: leg4_2_joint}
+    leg4_3_joint: {name: leg4_3_joint}
   
   state_publish_rate: 50

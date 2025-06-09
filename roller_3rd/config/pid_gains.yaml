@@ -1,0 +1,12 @@
+leg1_1_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
+leg1_2_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
+leg1_3_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
+leg2_1_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
+leg2_2_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
+leg2_3_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
+leg3_1_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
+leg3_2_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
+leg3_3_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
+leg4_1_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
+leg4_2_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
+leg4_3_joint: { p: 1.0, i: 0.0, d: 0.0, i_clamp: 5 }
