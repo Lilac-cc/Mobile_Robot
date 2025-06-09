@@ -21,8 +21,8 @@
         value="5.71725666117692" />
       <inertia
         ixx="0.0225933299115147"
-        ixy="-7.46338336817294E-18"
-        ixz="-8.65561792975494E-20"
+        ixy="-7.6232965252887E-18"
+        ixz="-8.65561792975497E-20"
         iyy="0.0444190381762262"
         iyz="-5.95570041038183E-20"
         izz="0.0574836069857794" />
@@ -114,16 +114,16 @@
     name="leg1_2_Link">
     <inertial>
       <origin
-        xyz="0.0200223800027242 5.55111512312578E-17 -0.015"
+        xyz="0.0200223800027242 -5.55111512312578E-17 -0.015"
         rpy="0 0 0" />
       <mass
         value="0.111205750411731" />
       <inertia
-        ixx="2.18856469213198E-05"
-        ixy="1.6940658945086E-20"
-        ixz="6.79741766887558E-21"
+        ixx="2.18856469213197E-05"
+        ixy="-1.43995601033231E-20"
+        ixz="6.48539688484168E-21"
         iyy="0.000444744745767282"
-        iyz="-9.23153143079456E-21"
+        iyz="-9.0763743139162E-21"
         izz="0.000444744745767282" />
     </inertial>
     <visual>
@@ -286,16 +286,16 @@
     name="leg2_2_Link">
     <inertial>
       <origin
-        xyz="0.020022380002724 0 -0.015"
+        xyz="0.020022380002724 2.77555756156289E-17 -0.015"
         rpy="0 0 0" />
       <mass
         value="0.111205750411731" />
       <inertia
         ixx="2.18856469213197E-05"
         ixy="6.52215369385811E-20"
-        ixz="2.6318863250598E-20"
+        ixz="2.59774815791434E-20"
         iyy="0.000444744745767282"
-        iyz="-4.28962018583184E-22"
+        iyz="-4.00054201737798E-22"
         izz="0.000444744745767282" />
     </inertial>
     <visual>
@@ -351,7 +351,7 @@
         value="0.440608369665969" />
       <inertia
         ixx="0.00059757510135947"
-        ixy="-6.00188944931833E-20"
+        ixy="-6.00188944931832E-20"
         ixz="5.02128542454901E-21"
         iyy="0.00059757510135947"
         iyz="-2.43945488809238E-19"
@@ -399,7 +399,7 @@
     name="leg3_1_Link">
     <inertial>
       <origin
-        xyz="0.0229508358714045 -1.38777878078145E-17 8.67361737988404E-18"
+        xyz="0.0229508358714045 1.38777878078145E-17 8.67361737988404E-18"
         rpy="0 0 0" />
       <mass
         value="0.350969420203415" />
@@ -464,10 +464,10 @@
         value="0.111205750411731" />
       <inertia
         ixx="2.18856469213199E-05"
-        ixy="-7.87740640946499E-20"
-        ixz="-5.46487573117288E-21"
+        ixy="-7.19978005166155E-20"
+        ixz="-5.05252716274659E-21"
         iyy="0.000444744745767282"
-        iyz="5.43866104817508E-21"
+        iyz="5.04720972906554E-21"
         izz="0.000444744745767282" />
     </inertial>
     <visual>
@@ -578,9 +578,9 @@
       <inertia
         ixx="0.000303791179644144"
         ixy="-4.47233396150271E-19"
-        ixz="-8.15651439121812E-20"
+        ixz="-8.15599673895411E-20"
         iyy="0.00119023844034398"
-        iyz="-4.73281423090706E-21"
+        iyz="-4.73300249352711E-21"
         izz="0.0010182423165243" />
     </inertial>
     <visual>
@@ -637,9 +637,9 @@
       <inertia
         ixx="2.18856469213198E-05"
         ixy="-7.96210970419042E-20"
-        ixz="1.16988580810433E-20"
+        ixz="1.16022162491616E-20"
         iyy="0.000444744745767282"
-        iyz="-4.59912379973578E-21"
+        iyz="-4.67091092771267E-21"
         izz="0.000444744745767282" />
     </inertial>
     <visual>
@@ -737,6 +737,124 @@
       link="leg4_3_Link" />
     <axis
       xyz="0 0 -1" />
+    <dynamics damping="${Damping}" friction="${Friction}"/>
+  </joint>
+  <link
+    name="mecanum1_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0335103216382911" />
+      <inertia
+        ixx="5.36165146212658E-06"
+        ixy="0"
+        ixz="-9.4039548065783E-38"
+        iyy="5.36165146212658E-06"
+        iyz="-2.35098870164458E-38"
+        izz="5.36165146212658E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://roller_3rd/meshes/mecanum1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://roller_3rd/meshes/mecanum1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mecanum1_joint"
+    type="continuous">
+    <origin
+      xyz="0.15165 0 -0.05"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="mecanum1_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="6.2"
+      effort="0"
+      velocity="0" />
+    <dynamics damping="${Damping}" friction="${Friction}"/>
+  </joint>
+  <link
+    name="mecanum2_link">
+    <inertial>
+      <origin
+        xyz="0 -5.55111512312578E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0335103216382911" />
+      <inertia
+        ixx="5.36165146212658E-06"
+        ixy="0"
+        ixz="0"
+        iyy="5.36165146212658E-06"
+        iyz="0"
+        izz="5.36165146212658E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://roller_3rd/meshes/mecanum2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://roller_3rd/meshes/mecanum2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mecanum2_joint"
+    type="continuous">
+    <origin
+      xyz="-0.14835 0 -0.05"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="mecanum2_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="6.2"
+      effort="0"
+      velocity="0" />
     <dynamics damping="${Damping}" friction="${Friction}"/>
   </joint>
 </robot>
